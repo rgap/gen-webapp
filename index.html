@@ -943,7 +943,7 @@ Un gran nombre de negocio debe ayudar a su empresa se destacan y proporcionar un
 		sliderMaxLabel = document.getElementById("slider-max-label");
 	handlesSlider.noUiSlider.on("update", (function(t) {
 		const [e, n] = t;
-		e > 0 || n < 20 ? (sliderLengthText.innerHTML = `${Number(e)} to ${20===Number(n)?"20+":Number(n)} characters`, sliderMinLabel.innerHTML = `${Number(e)}`, sliderMaxLabel.innerHTML = `${20===Number(n)?"20+":Number(n)}`) : (sliderLengthText.innerHTML = "Any length", sliderMinLabel.innerHTML = "0", sliderMaxLabel.innerHTML = "20+"), minCharactersLength = Number(e), maxCharactersLength = Number(n)
+		e > 0 || n < 20 ? (sliderLengthText.innerHTML = `${Number(e)} to ${20===Number(n)?"20+":Number(n)} characters`, sliderMinLabel.innerHTML = `${Number(e)}`, sliderMaxLabel.innerHTML = `${20===Number(n)?"20+":Number(n)}`) : (sliderLengthText.innerHTML = "Cualquier tamaño", sliderMinLabel.innerHTML = "0", sliderMaxLabel.innerHTML = "20+"), minCharactersLength = Number(e), maxCharactersLength = Number(n)
 	}));
 	</script>
 	<script type="text/javascript">
