@@ -1,0 +1,14 @@
+DROP TABLE IF EXISTS empresa;
+
+CREATE TABLE empresa (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    creacion TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    nombre TEXT NOT NULL
+);
+
+
+
+INSERT INTO empresa (nombre)
+VALUES 
+('SODIMAC'),
+('Cineplanet');
