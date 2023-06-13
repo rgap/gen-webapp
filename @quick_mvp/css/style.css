@@ -1,0 +1,509 @@
+.looka-logo,
+a {
+    text-decoration: none
+}
+
+.button-search,
+.css-1oa5tk9,
+button {
+    transition: .3s cubic-bezier(0, .58, .13, .99)
+}
+
+/* @font-face {
+    font-family: Circular Bold;
+    font-style: normal;
+    font-weight: 400;
+    src: url(fonts/lineto-circular-bold.woff2) format("woff2"), url(fonts/lineto-circular-bold.woff) format("woff")
+}
+
+@font-face {
+    font-family: Circular;
+    font-style: normal;
+    font-weight: 400;
+    src: url(fonts/lineto-circular-book.woff2) format("woff2"), url(fonts/lineto-circular-book.woff) format("woff")
+} */
+
+body {
+    font-family: Circular, Arial, sans-serif
+}
+
+.root {
+    min-height: 100%;
+    font-size: 18px
+}
+
+.main {
+    padding: 0 30px
+}
+
+.footer {
+    width: 100%;
+    padding: 100px 0;
+    text-align: center;
+    font-size: 15px
+}
+
+.header {
+    justify-content: space-between;
+    padding: 10px 16px
+}
+
+.header,
+.search-container {
+    display: flex;
+    align-items: center
+}
+
+.search-container {
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    margin: 32px auto
+}
+
+.search-container .title {
+    font-size: 50px;
+    letter-spacing: -2px;
+    text-align: center;
+    margin-top: 0;
+    font-family: Circular Bold
+}
+
+.css-1d8vp8s {
+    width: 100%;
+    display: flex;
+    justify-content: center
+}
+
+.css-1tbhaps {
+    width: 100%;
+    max-width: 1000px;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    text-align: left
+}
+
+.box,
+.button-container,
+.dot {
+    text-align: center
+}
+
+.css-19ls11i {
+    display: flex;
+    background: #f3f3f3;
+    padding: 8px 0 2px 8px;
+    border-radius: 25px;
+    font-size: 18px;
+    line-height: 1.2;
+    cursor: text
+}
+
+.css-19ls11i:hover {
+    border: none;
+    box-shadow: #5341ff
+}
+
+.css-1u4hpl4 {
+    display: inline
+}
+
+.css-1ncbnqm {
+    display: inline-block;
+    padding: 7px 8px;
+    margin-bottom: 6px;
+    max-width: 100%;
+    position: relative
+}
+
+.button-search,
+.css-1oa5tk9 {
+    position: absolute;
+    cursor: pointer
+}
+
+.content-container {
+    margin-bottom: 32px
+}
+
+.css-7viqzq {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: inherit;
+    line-height: inherit;
+    width: 316px!important;
+    background-color: transparent
+}
+
+.css-1oa5tk9 {
+    top: calc(50% - 14px);
+    right: 55px;
+    padding: 5px;
+    display: none;
+    opacity: .2
+}
+
+.button-search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    color: #fff;
+    right: 5px;
+    top: 5px;
+    height: 40px;
+    width: 40px;
+    border-radius: 25px;
+    background: #5341ff;
+    overflow: hidden
+}
+
+.cards-idea {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px
+}
+
+.box {
+    border-radius: 10px
+}
+
+.box-title {
+    display: block;
+    max-width: 1000px;
+    margin: 0 auto 20px;
+    font-family: Circular Bold;
+    font-size: 36px
+}
+
+.box-secondary-title {
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    margin-top: 25px;
+    letter-spacing: -1px;
+    font-family: Circular Bold
+}
+
+.green-light {
+    color: #5341ff
+}
+
+.red-light {
+    color: #d63c58
+}
+
+.box-green {
+    background: #fafafa;
+    padding: 50px
+}
+
+.box-gray {
+    background: #fafafa;
+    padding: 30px 40px 40px
+}
+
+.looka-logo {
+    color: #5342fe;
+    background: #fff;
+    padding: 2px 6px;
+    border-radius: 4px;
+    transition: .1s
+}
+
+.div-words-inner-box,
+button {
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer
+}
+
+.idea-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    margin-top: 52px;
+    padding: 0 64px
+}
+
+.mt-32 {
+    margin-top: 32px
+}
+
+p {
+    margin: 5px 0;
+    color: #1e1f27
+}
+
+a {
+    color: #5341ff
+}
+
+strong {
+    font-weight: 700
+}
+
+h3,
+strong {
+    font-family: Circular Bold
+}
+
+h3 {
+    font-size: 20px;
+    margin-bottom: 12px
+}
+
+h2 {
+    font-family: Circular Bold
+}
+
+.questions-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 72px;
+    margin-top: 50px;
+    padding: 50px 64px
+}
+
+.bottom-section,
+.button-word,
+.div-words-inner,
+.div-words-inner-box,
+.dot,
+.paginate-container {
+    display: inline-block
+}
+
+.div-words {
+    position: relative;
+    height: 200px;
+    overflow: hidden
+}
+
+.div-words-inner {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    transition: transform .8s cubic-bezier(.43, .12, 0, .99);
+    transform: translateY(0)
+}
+
+.div-words-inner-box {
+    padding: 8px 25px;
+    margin: 5px;
+    position: relative;
+    transition: 50ms ease-in-out;
+    background: #fff
+}
+
+.div-words-inner-box:hover {
+    color: #5341ff;
+    background: rgba(0, 0, 0, .05)
+}
+
+.button-container {
+    width: 100%;
+    margin-top: 40px
+}
+
+.dot-text-active,
+.dot-text-inactive {
+    transform: scale(1);
+    width: 8px;
+    height: 8px;
+    display: inline-block
+}
+
+.bottom-section {
+    margin-left: 80px;
+    margin-right: 80px
+}
+
+button {
+    padding: 8px 50px;
+    margin: 10px 5px;
+    border: 1px solid #fafafa
+}
+
+.button-active {
+    background: #5341ff;
+    color: #fff
+}
+
+.dot {
+    padding: 8px;
+    line-height: 0;
+    margin: 0;
+    border-radius: 6px;
+    cursor: pointer
+}
+
+.dot-text-inactive {
+    background: #908f96;
+    border-radius: 10px
+}
+
+.dot-text-active {
+    background: #000;
+    border-radius: 10px
+}
+
+.paginate-container {
+    max-width: 150px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: center
+}
+
+.css-a1ng1i {
+    right: 22px;
+    top: 20px;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 10px;
+    transition: .15s ease-in-out;
+    z-index: 1
+}
+
+.logo-header svg {
+    height: 32px;
+    width: 80px
+}
+
+.button-word {
+    box-sizing: border-box;
+    margin: 0 6px 6px 0;
+    padding: 6px 8px;
+    border-radius: 20px;
+    border: none;
+    background: #fff;
+    font-size: inherit;
+    line-height: inherit;
+    cursor: pointer
+}
+
+.css-a1ng1i svg * {
+    fill: #181933
+}
+
+@media screen and (max-width:768px) {
+    .cards-idea,
+    .idea-section,
+    .questions-section {
+        grid-template-columns: repeat(1, 1fr)
+    }
+    .idea-section,
+    .main,
+    .questions-section {
+        padding: 0
+    }
+    .button-search span {
+        display: none
+    }
+    .box,
+    .box-green {
+        padding: 8px
+    }
+    .div-words-inner-box {
+        font-size: 16px;
+        padding: 8px 15px
+    }
+    h1 {
+        font-size: 24px;
+        font-family: Circular Bold
+    }
+    .bottom-section {
+        display: inline-block;
+        margin-left: 20px;
+        margin-right: 20px
+    }
+}
+
+@media screen and (min-width:900px) {
+    .css-1oa5tk9 {
+        transform: translateX(-90px)
+    }
+    .button-search {
+        width: 130px
+    }
+}
+
+.css-6ev0qw {
+    margin-left: 10px;
+    vertical-align: top;
+    margin-top: 9px
+}
+
+.css-q32o3n {
+    padding: 5px 15px;
+    color: #121339;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 18px;
+    transition: .3s cubic-bezier(0, .58, .13, .99)
+}
+
+.css-6ev0qw>* {
+    fill: #121339
+}
+
+.css-hilys7 {
+    color: #222;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px -5px rgba(0, 0, 0, .2);
+    padding: 30px;
+    width: 290px;
+    outline: 0
+}
+
+.css-13znbwc {
+    position: relative;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    margin-top: 16px
+}
+
+.noUi-base,
+.noUi-horizontal {
+    height: 4px!important
+}
+
+.noUi-connects {
+    background: #e1e1e1!important
+}
+
+.noUi-target {
+    border: none!important
+}
+
+.noUi-connect {
+    background: #5341ff!important
+}
+
+.noUi-handle {
+    background: #fff!important;
+    border: 3px solid #5341ff!important;
+    border-radius: 20px!important;
+    width: 20px!important;
+    height: 20px!important;
+    top: -8px!important
+}
+
+.noUi-handle:after,
+.noUi-handle:before {
+    content: none!important
+}
+
+.css-uzysk8 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #222;
+    font-family: Circular Bold;
+    margin: 22px 0
+}
