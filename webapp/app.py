@@ -7,10 +7,9 @@ app = Flask(__name__)
 app.secret_key = "secret_delas"
 
 
-@app.route("/")
-def index():
-    flash("Ingresa tu nombre de empresa")
-    return render_template("index.html")
+# @app.route("/")
+# def index():
+#     return render_template("index.html")
 
 
 def get_db_connection():
@@ -54,9 +53,13 @@ def calculate_similarity(consulta, empresas_nombres, substring_penalty=1):
     return similarity_list
 
 
-@app.route("/consulta", methods=["POST", "GET"])
+@app.route("/", methods=["POST", "GET"])
 def consulta():
-    nombre_consultado = str(request.form["nombre_input"])
+    try:
+        nombre_consultado = str(request.form["nombre_input"])
+    except:
+        nombre_consultado = ""
+        top_empresa_nombre_similaridad = ""
 
     conn = get_db_connection()
     empresas = conn.execute("SELECT nombre FROM empresa").fetchall()

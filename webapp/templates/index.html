@@ -18,12 +18,14 @@
 		<div class="search-container">
 			<div>
 				<h1 class="title">
+					<a class="black_link" href=".">
 					Generador de Nombre de Empresa
+					</a>
 				</h1>
 			</div>
 			<div class="css-1d8vp8s">
 				<div class="css-1tbhaps">
-					<form action="consulta" method="post" id="consulta_form">
+					<form action="" method="post" id="consulta_form">
 						<div class="css-19ls11i">
 							<div id="button-word-list"></div>
 							<div class="css-1u4hpl4" aria-relevant="additions removals" aria-live="polite"></div>
@@ -112,8 +114,9 @@
                 <div class="box box-green">
                     <p class="box-title"> 
                         <span class="green-light">
-                        Un gran nombre de negocio debe ayudar a su empresa se destacan y proporcionar un lienzo para pintar su propio significado.
-                        </span> Este generador de nombres de empresa te ayuda a aportar ideas, comprobar la disponibilidad y ver ideas de logotipos al instante. </p>
+						Un gran nombre de negocio debe ayudar a tu empresa a destacar del resto.
+						</span>Este generador de nombres de empresa te ayudará a encontrar ideas, comprobar la disponibilidad de acuerdo a empresas ya registradas en Perú y ver ideas de logotipos al instante.
+					</p>
                     <!--<p> From your friends at <a class="looka-logo" href="https://looka.com" target="blank" rel="noopener noreferrer">Looka</a> - a logo maker and branding platform. </p>-->
                 </div>
             </div>        
@@ -188,6 +191,10 @@
 	})), searchInput.addEventListener("keydown", (function(t) {
 		"Tab" === t.key && "" !== this.value && (handleAddWords(this.value), t.preventDefault()), "Enter" === t.key && (goToBusinessNameReactApp(), t.preventDefault()), "Backspace" === t.key && "" === this.value && words.length > 0 && (words.pop(), buttonList.removeChild(buttonList.lastChild), 0 === words.length && (searchInput.placeholder = "Escribe tu idea de nombre de empresa..."))
 	}));
+
+	document.addEventListener("DOMContentLoaded", function() {
+		onload();
+	});
 
     // , window.addEventListener("click", (function(t) {
 	// 	const e = document.getElementById("length-popup-button"),
