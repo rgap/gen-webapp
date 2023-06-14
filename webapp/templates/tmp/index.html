@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Consultas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    <form action="consulta" method="post">        
+        <p>Escribe un nombre:</p>
+        <br>
+        <input type="text" name="nombre_input">
+        <br>
+        <input type="submit" value="Consultar" id="boton_consulta">
+        <br>
+
+        {% if nombre_consultado %}
+            <p>Consultaste el nombre {{ nombre_consultado }}</p>
+
+            <div class="lista_parecidos">
+                <p>Nombres similares:</p>
+                <br>
+                {% for nombre, similaridad in empresa_nombre_similaridad %}
+                    <div><p>{{ nombre }} es {{ "%.2f"|format(similaridad) }} similar</p></div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    </form>
+</body>
+</html>

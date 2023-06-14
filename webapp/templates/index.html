@@ -1,31 +1,237 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Consultas</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/nouislider.min.css') }}">
+	<!-- <script src="{{ url_for('static', filename='js/nouislider.min.js') }}"></script> -->
+	<title>Generador de Nombre de Empresa</title>
+	<!-- <meta property="og:image" content="images/social_share.png"> -->
 </head>
-<body>
-    <form action="consulta" method="post">        
-        <p>Escribe un nombre:</p>
-        <br>
-        <input type="text" name="nombre_input">
-        <br>
-        <input type="submit" value="Consultar" id="boton_consulta">
-        <br>
+<body class="root">
+	<header class="header">
+	</header>
+	<main class="main">
+		<div class="search-container">
+			<div>
+				<h1 class="title">
+					Generador de Nombre de Empresa
+				</h1>
+			</div>
+			<div class="css-1d8vp8s">
+				<div class="css-1tbhaps">
+					<form action="consulta" method="post" id="consulta_form">
+						<div class="css-19ls11i">
+							<div id="button-word-list"></div>
+							<div class="css-1u4hpl4" aria-relevant="additions removals" aria-live="polite"></div>
+							<div class="css-1ncbnqm">
+								<div class="css-0">
+									<input id="input-search" name="nombre_input" placeholder="Escribe tu idea de nombre de empresa..." class="css-7viqzq" value style="width: 269px"> </div>
+							</div>
+						</div>
+						<a class="css-1oa5tk9">
+							<svg width="15px" height="15px" viewBox="0 0 15 15" version="1.1">
+								<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+									<g id="Artboard" transform="translate(-541.000000, -305.000000)" stroke="#D3D3DD" stroke-width="2">
+										<g id="Group-16-Copy-3" transform="translate(138.000000, 173.000000)">
+											<g id="domain-checker" transform="translate(0.000000, 42.000000)">
+												<path d="M410.121831,88.550402 L410.121831,105.693259 M401.550402,97.1218305 L418.693259,97.1218305" id="Combined-Shape" transform="translate(410.121831, 97.121831) rotate(45.000000) translate(-410.121831, -97.121831) " /> </g>
+										</g>
+									</g>
+								</g>
+							</svg>
+						</a>
+
+						<a href="javascript:{}" onclick="enviar_consulta_form()" class="button-search" id="boton_consulta"> <span>Generar</span>
+							<svg width="19px" height="15px" viewBox="0 0 19 15" version="1.1">
+								<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+									<g id="Artboard" transform="translate(-544.000000, -586.000000)" stroke="#fff" stroke-width="2.3">
+										<g id="Group" transform="translate(114.000000, 395.000000)">
+											<g id="Group-15" transform="translate(0.000000, 53.000000)">
+												<g id="Group-Copy-16" transform="translate(0.000000, 120.000000)">
+													<path d="M444.994406,20.2963193 L444.994406,28.7604073 M436.406854,20.172855 L444.870942,20.172855 M433.881728,31.1850287 L444.870942,20.172855" id="Combined-Shape" transform="translate(439.553301, 25.467514) rotate(45.000000) translate(-439.553301, -25.467514) " /> </g>
+											</g>
+										</g>
+									</g>
+								</g>
+							</svg>
+						</a>
+					</form>
+				</div>
+			</div>
+			<!-- <div class="css-13znbwc">
+				<div class="css-q32o3n" id="length-popup-button" role="button"> <span id="slider-length-text">
+						Cualquier tamaño
+					</span>
+					<svg class="css-6ev0qw" width="10px" height="6px" viewBox="0 0 10 6" version="1.1">
+						<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+							<g id="Artboard" transform="translate(-205.000000, -245.000000)">
+								<g id="Group-13" transform="translate(130.000000, 237.000000)">
+									<path d="M75.4968358,8.11192847 C75.6920979,7.91666633 76.0086804,7.91666633 76.2039426,8.11192847 L76.2039426,8.11192847 L79.7512893,11.6592893 L83.2993581,8.11192847 C83.4946202,7.91666633 83.8112027,7.91666633 84.0064648,8.11192847 L84.2913722,8.3968358 C84.4866343,8.59209794 84.4866343,8.90868043 84.2913722,9.10394258 L80.3301773,13.0651375 C80.1734537,13.221861 79.9385735,13.2527933 79.7509986,13.1579343 C79.5647272,13.2527933 79.3298469,13.221861 79.1731234,13.0651375 L79.1731234,13.0651375 L75.2119285,9.10394258 C75.0166663,8.90868043 75.0166663,8.59209794 75.2119285,8.3968358 L75.2119285,8.3968358 Z" id="Combined-Shape" /> </g>
+							</g>
+						</g>
+					</svg>
+				</div>
+				<div id="tippy-1" style="display: none; position: absolute; top: 0px; transform: translate(0px, 33px);">
+					<div class="tippy-box css-hilys7">
+						<div class="tippy-content">
+							<div><span>Generar sólo nombres de empresas que estén entre</span>
+								<p class="css-uzysk8"> <span id="slider-min-label">
+										0
+									</span> y <span id="slider-max-label">
+										20+
+									</span> caractereres </p>
+								<div id="slider-handles"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div> -->
+		</div>
 
         {% if nombre_consultado %}
-            <p>Consultaste el nombre {{ nombre_consultado }}</p>
-
-            <div class="lista_parecidos">
-                <p>Nombres similares:</p>
-                <br>
-                {% for nombre, similaridad in empresa_nombre_similaridad %}
-                    <div><p>{{ nombre }} es {{ "%.2f"|format(similaridad) }} similar</p></div>
-                {% endfor %}
-            </div>
+            <div class="content-container estilo_resultado">
+                <div class="titulo_simple">
+                    <p>Consultaste el nombre <span class="orange">{{ nombre_consultado }}</span></p>
+                </div>
+                <div class="box box-green">
+                    <div class="lista_parecidos">
+                        <p>50 Nombres de Empresa Similares:</p>
+                        <br>
+                        {% for nombre, similaridad in top_empresa_nombre_similaridad %}
+                            <div><p><span class="green-light">{{ nombre }}</span> es {{ "%.1f"|format(similaridad) }}% similar</p></div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>  
+        {% else %}
+            <div class="content-container">
+                <div class="box box-green">
+                    <p class="box-title"> 
+                        <span class="green-light">
+                        Un gran nombre de negocio debe ayudar a su empresa se destacan y proporcionar un lienzo para pintar su propio significado.
+                        </span> Este generador de nombres de empresa te ayuda a aportar ideas, comprobar la disponibilidad y ver ideas de logotipos al instante. </p>
+                    <!--<p> From your friends at <a class="looka-logo" href="https://looka.com" target="blank" rel="noopener noreferrer">Looka</a> - a logo maker and branding platform. </p>-->
+                </div>
+            </div>        
         {% endif %}
-    </form>
+		
+	</main>
+	<!-- <footer class="footer"> Copyright <a href="#" target="blank" rel="noopener noreferrer"> Página de prueba</a>. Si tienes pregunta puedes<a href="#" target="blank" rel="noopener noreferrer"> contactarnos</a>.</footer> -->
+	<script type="text/javascript" defer>
+
+    function enviar_consulta_form() {
+        words.push(document.getElementById('input-search').value);
+        palabras_unidas = words.join(' ');
+        document.getElementById('input-search').value = palabras_unidas;
+        document.getElementById('consulta_form').submit();
+    }
+
+	let minCharactersLength = 0,
+		maxCharactersLength = 20;
+	const searchInput = document.getElementById("input-search"),
+		buttonList = document.getElementById("button-word-list"),
+		words = [];
+	
+	const handleAddWords = t => {
+			words.push(t.replace(" ", "")), buttonList.innerHTML = "";
+			for(const t of words) {
+				const e = document.createElement("button");
+				e.className = "button-word", e.innerHTML = t, e.onclick = function() {
+					const n = words.indexOf(t);
+					n > -1 && words.splice(n, 1), 0 === words.length && (searchInput.placeholder = "Escribe tu idea de nombre de empresa..."), buttonList.removeChild(e)
+				}, buttonList.appendChild(e)
+			}
+			searchInput.placeholder = "Agrega otra palabra", searchInput.value = ""
+		},
+		handleNextPageAbstractCard = () => {
+			const t = document.getElementById("words-section-abstract"),
+				e = document.getElementById("dots-section-abstract"),
+				n = abstractCardPage,
+				a = abstractCardPage + 1;
+			if(a > 2) return;
+			e.children[a].children[0].className = "dot-text-active";
+			e.children[n].children[0].className = "dot-text-inactive", t.style.transform = `translateY(${-280*a}px)`, abstractCardPage++, handlePaginationAbstractCard()
+		},
+		handlePreviousPageAbstractCard = () => {
+			const t = document.getElementById("words-section-abstract"),
+				e = document.getElementById("dots-section-abstract"),
+				n = abstractCardPage,
+				a = abstractCardPage - 1;
+			if(a < 0) return;
+			e.children[a].children[0].className = "dot-text-active";
+			e.children[n].children[0].className = "dot-text-inactive", t.style.transform = `translateY(${-280*a}px)`, abstractCardPage--, handlePaginationAbstractCard()
+		},
+		handleNextPageIndustryCard = () => {
+			const t = document.getElementById("words-section-industry"),
+				e = document.getElementById("dots-section-industry"),
+				n = industryCardPage,
+				a = industryCardPage + 1;
+			if(a > totalIndustryPages - 1) return;
+			e.children[a].children[0].className = "dot-text-active";
+			e.children[n].children[0].className = "dot-text-inactive", t.style.transform = `translateY(${-280*a}px)`, industryCardPage++, handlePaginationIndustryCard()
+		},
+		handlePreviousPageIndustryCard = () => {
+			const t = document.getElementById("words-section-industry"),
+				e = document.getElementById("dots-section-industry"),
+				n = industryCardPage,
+				a = industryCardPage - 1;
+			if(a < 0) return;
+			e.children[a].children[0].className = "dot-text-active";
+			e.children[n].children[0].className = "dot-text-inactive", t.style.transform = `translateY(${-280*a}px)`, industryCardPage--
+		};
+	searchInput.addEventListener("input", (function() {
+		"" !== this.value.trim() && this.value.includes(" ") && handleAddWords(this.value)
+	})), searchInput.addEventListener("keydown", (function(t) {
+		"Tab" === t.key && "" !== this.value && (handleAddWords(this.value), t.preventDefault()), "Enter" === t.key && (goToBusinessNameReactApp(), t.preventDefault()), "Backspace" === t.key && "" === this.value && words.length > 0 && (words.pop(), buttonList.removeChild(buttonList.lastChild), 0 === words.length && (searchInput.placeholder = "Escribe tu idea de nombre de empresa..."))
+	}));
+
+    // , window.addEventListener("click", (function(t) {
+	// 	const e = document.getElementById("length-popup-button"),
+	// 		n = document.getElementById("tippy-1");
+	// 	n.contains(t.target) || (e.contains(t.target) && "none" === n.style.display ? n.style.display = "block" : n.style.display = "none")
+	// }))
+
+	// var handlesSlider = document.getElementById("slider-handles");
+	// noUiSlider.create(handlesSlider, {
+	// 	start: [0, 20],
+	// 	snap: !0,
+	// 	connect: !0,
+	// 	range: {
+	// 		min: 0,
+	// 		"5%": 1,
+	// 		"10%": 2,
+	// 		"15%": 3,
+	// 		"20%": 4,
+	// 		"25%": 5,
+	// 		"30%": 6,
+	// 		"35%": 7,
+	// 		"40%": 8,
+	// 		"45%": 9,
+	// 		"50%": 10,
+	// 		"55%": 11,
+	// 		"60%": 12,
+	// 		"65%": 13,
+	// 		"70%": 14,
+	// 		"75%": 15,
+	// 		"80%": 16,
+	// 		"85%": 17,
+	// 		"90%": 18,
+	// 		"95%": 19,
+	// 		max: 20
+	// 	}
+	// });
+	// const sliderLengthText = document.getElementById("slider-length-text"),
+	// 	sliderMinLabel = document.getElementById("slider-min-label"),
+	// 	sliderMaxLabel = document.getElementById("slider-max-label");
+	// handlesSlider.noUiSlider.on("update", (function(t) {
+	// 	const [e, n] = t;
+	// 	e > 0 || n < 20 ? (sliderLengthText.innerHTML = `${Number(e)} to ${20===Number(n)?"20+":Number(n)} characters`, sliderMinLabel.innerHTML = `${Number(e)}`, sliderMaxLabel.innerHTML = `${20===Number(n)?"20+":Number(n)}`) : (sliderLengthText.innerHTML = "Cualquier tamaño", sliderMinLabel.innerHTML = "0", sliderMaxLabel.innerHTML = "20+"), minCharactersLength = Number(e), maxCharactersLength = Number(n)
+	// }));
+	</script>
 </body>
+
 </html>
