@@ -1,4 +1,4 @@
-# Company Name Generator WebApp
+# Company Name Generator Web App
 
 A simple website demo built as a part of a Startup project for the Hackathon: De CARA al Cambio.
 
